@@ -1,6 +1,7 @@
 /** Builders for series fixtures. Keeps the engine's tests about rules, not shapes. */
 
 import type { DraftSlot, DraftState, GameRecord, Ruleset, SeriesState, Side } from "../contracts";
+import { newDraft } from "../src/engine/draftOrder";
 
 export function game(
   gameNumber: number,
@@ -14,8 +15,18 @@ export function game(
   };
 }
 
-export function draft(gameNumber: number, slots: DraftSlot[] = []): DraftState {
-  return { gameNumber, slots, cursor: slots.filter((s) => s.championId !== null).length };
+/**
+ * A draft whose FIRST slots are already filled as given, the rest empty — so a
+ * test can say "Ahri is already banned this game" without listing 20 slots.
+ * Pass nothing for an untouched 20-slot draft.
+ */
+export function draft(gameNumber: number, filled: DraftSlot[] = []): DraftState {
+  const d = newDraft(gameNumber);
+  return {
+    ...d,
+    slots: [...filled, ...d.slots.slice(filled.length)],
+    cursor: filled.length,
+  };
 }
 
 export function series(opts: {
@@ -30,6 +41,6 @@ export function series(opts: {
     ruleset: opts.ruleset ?? "fearless",
     bestOf: opts.bestOf ?? 5,
     games,
-    current: opts.current ?? draft(games.length + 1),
+    current: opts.current ?? newDraft(games.length + 1),
   };
 }

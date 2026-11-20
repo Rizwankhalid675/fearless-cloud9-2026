@@ -1,155 +1,115 @@
-# cloud9-jetbrains-2026
+# Fearless
 
 **A Fearless Draft organiser for League of Legends coaches that cannot propose an illegal pick.**
 
-Built at cloud9-jetbrains-2026 · 2026-11-19 · Tracks: Category 2 (LoL macro scouting & draft management) + JetBrains evidence bonus
+Cloud9 x JetBrains: Sky's The Limit 2026 · Category 2 (LoL macro scouting & draft management) · also entered for the JetBrains evidence bonus
 
-**Live:** _not deployed yet_ · **Demo:** [90-second walkthrough](#the-90-second-demo) · **Limits:** [what doesn't work yet](#honest-limits)
-
-![screenshot](docs/img/hero.png)
+**Live demo:** _pending first deploy_ · **Video:** _pending_ · **Limits:** [what this does not do](docs/LIMITS.md) · **Numbers:** [measured results](docs/RESULTS.md)
 
 ---
 
-## How cloud9-jetbrains-2026 meets the judging criteria
+## The problem
 
-| Criterion | Points | How we meet it | Where to see it |
+Fearless Draft bans every champion used in previous games of a series. By game 5 a coach is
+tracking roughly 50 unavailable champions across five games, on a 30-second draft timer, and
+the category brief names the artefact they do it with: a spreadsheet. The failure mode is not
+losing the draft. It is calling a pick that is already burned, on stage, with the clock
+running.
+
+## The idea
+
+**The model proposes. Deterministic code decides.**
+
+A pure rules engine owns champion availability and is the only thing in the codebase allowed
+to say whether a pick is permitted. An advisor suggests picks and bans with reasoning — and
+every suggestion it makes passes through that engine before it can be rendered. An illegal
+suggestion is not hidden. It is shown struck through, with the engine's reason and a chip for
+the game that burned it.
+
+On a measured run, **21 of 50 suggestions (42%)** from a realistic priority-sheet advisor were
+illegal. The gate caught all of them.
+
+## How it meets the judging criteria
+
+| Criterion | Weight | How it is met | Where to see it |
 |---|---:|---|---|
-| Technological Implementation | 20% | | §1 |
-| Design | 20% | | §2 |
-| Potential Impact | 20% | | §3 |
-| Quality of the Idea | 20% | | §4 |
-| Presentation | 20% | | §5 |
+| Technological Implementation | 20% | Pure TypeScript rules engine, 102 tests, verified against hand-computed ground truth on 10 fixtures — 10/10 exact. Built in WebStorm with `.idea/` committed. | [`src/engine/fearless.ts`](src/engine/fearless.ts), [`docs/RESULTS.md`](docs/RESULTS.md) |
+| Design | 20% | One screen, no scrolling during a draft, laid out the way coaches already read the game client. Type to search, Enter to lock. All 19 text styles verified against WCAG AA in the browser. | [`src/ui/`](src/ui/) |
+| Potential Impact | 20% | Replaces the spreadsheet the category brief names, for a job where being wrong is public. Both Fearless rulesets supported, because leagues differ. | [`docs/LIMITS.md`](docs/LIMITS.md) |
+| Quality of the Idea | 20% | Not "AI picks your draft". The interesting half is refusing the AI: a gate that keeps every illegal suggestion visible so the coach learns why it is gone. | [`src/advisor/gate.ts`](src/advisor/gate.ts) |
+| Presentation | 20% | Video shows game 4 with 30 champions burned and the gate blocking 4 of 5 suggestions, end to end. | [`VIDEO.md`](VIDEO.md) |
 
-> Replace every cell with a specific, checkable claim and a link to where the judge can verify it.
-> If a cell says something vague like "great UX", you have lost those points already.
+Bonus prize (JetBrains evidence): [`docs/JETBRAINS.md`](docs/JETBRAINS.md).
 
----
+## The measured numbers
 
-## 1. Technological Implementation (20% pts)
+| What | Result |
+|---|---|
+| Rules engine vs hand-computed ground truth | **10 / 10 fixtures exact** |
+| Illegal suggestions caught by the gate | **21 of 50 (42%)** |
+| Champion catalogue | 173 champions, Data Dragon patch 16.23.1, committed |
+| Tests | **102**, no network, no API key |
 
-### The problem, in numbers
-
-| Number | What it means | Source |
-|---|---|---|
-| | | |
-
-### Who it's for
-
-### Before and after
-
-| | Today | With cloud9-jetbrains-2026 |
-|---|---|---|
-| | | |
-
----
-
-## 2. Design (20% pts)
-
-### Architecture
-
-```mermaid
-flowchart LR
-  U[User] --> API[API]
-  API --> E[Deterministic check]
-  API --> L[LLM]
-  L --> E
-  E --> D[(Evidence store)]
-```
-
-### Results
-
-_Measured, with provenance. No adjectives._
-
-| Run | Metric | Value | How it was measured |
-|---|---|---|---|
-| | | | |
-
-### The before/after progression
-
-| Version | What changed | Result |
-|---|---|---|
-| v1 | | |
-| v2 | | |
-| v3 | | |
-
----
-
-## 3. Potential Impact (20% pts)
-
----
-
-## 4. Quality of the Idea (20% pts)
-
----
-
-## 5. Presentation (20%)
-
-See [VIDEO.md](../VIDEO.md) for the beat sheet.
-
----
-
-## Track requirements
-
-- **Built with a JetBrains IDE, .idea committed:** how we satisfy it, and the file that proves it
-- **Public repo with an OSS licence:** how we satisfy it, and the file that proves it
-
-## Sponsor tech, in detail
-
-| Sponsor | What we use it for | Where in the code |
-|---|---|---|
-| | | |
-
----
-
-## The 90-second demo
-
-| Step | Do | Watch for |
-|---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
+Regenerate both with `npm run measure`. Numbers are written by that script, not by hand.
 
 ## Run it
 
 ```bash
-./scripts/demo-up.sh       # one command, everything up
-./scripts/demo-status.sh   # health
-./scripts/demo-reset.sh    # back to a pristine demo state
-./scripts/demo-down.sh
+npm install
+npm test
+npm run dev
 ```
 
-## For AI agents
+Then press **Load a demo series** — three completed games, 30 champions burned, game 4
+mid-draft. No API key and no network needed: the default advisor is offline.
 
-Start with [`AGENTS.md`](AGENTS.md).
+## How it works
 
-| Need | Where |
+```
+                 ┌──────────────────┐
+  advisor ──────▶│  gateSuggestions │──────▶ screen
+  (proposes)     └────────┬─────────┘        (blocked ones shown,
+                          │                   struck through, with
+                 ┌────────▼─────────┐         the game that burned them)
+                 │  rules engine    │
+                 │  legalityOf()    │  ◀── the only authority on availability
+                 └──────────────────┘
+```
+
+| File | Does |
 |---|---|
-| Contracts and shared types | `contracts.ts` |
-| Entry point | |
-| Deterministic checks | |
-| Demo seed data | `demo/seed/` |
+| [`contracts.ts`](contracts.ts) | Every shared type. `Legality` is produced by the engine and by nothing else. |
+| [`src/engine/fearless.ts`](src/engine/fearless.ts) | Derives the legal pool. Pure — no clock, no network, no React. |
+| [`src/engine/draftOrder.ts`](src/engine/draftOrder.ts) | 20-slot tournament order; asks the engine, never re-derives legality. |
+| [`src/engine/series.ts`](src/engine/series.ts) | Series state, and an import that reports every problem rather than throwing. |
+| [`src/advisor/gate.ts`](src/advisor/gate.ts) | The only path from an advisor to the screen. |
+| [`src/advisor/tier.ts`](src/advisor/tier.ts) | Offline advisor. Deliberately pool-blind — see below. |
+| [`src/advisor/llm.ts`](src/advisor/llm.ts) | Optional model advisor. Deliberately unvalidated — see below. |
 
-## Repo map
+### Two deliberate decisions that look like bugs
 
-```
-contracts.ts     frozen types and API shapes
-src/             application code
-demo/            seed data + runbook
-scripts/         demo + preflight tooling
-docs/            architecture, screenshots
-```
+**The default advisor does not know what is legal.** That is the point. It ranks champions by
+a static priority tier, exactly as a coach's priority sheet does, and a priority sheet knows
+nothing about what the series burned. So the offline demo shows the gate catching real
+illegal suggestions, with no API key and no network — and the 42% is a measurement of the
+status quo, not of a strawman.
 
----
+**Neither advisor validates its own output.** If an advisor filtered itself, the gate would
+stop being the thing that keeps the product honest, and the failure worth showing — a model
+confidently naming a champion that is burned, or one that was never real — would be hidden
+inside the advisor instead of shown on screen.
 
 ## Honest limits
 
-_Name your own weaknesses here, before a judge finds them. This section wins points._
+Named in full in [`docs/LIMITS.md`](docs/LIMITS.md). The short version: champion roles are a
+convenience filter derived from Data Dragon tags and are not ground truth; the priority tiers
+are one person's opinion; the champion snapshot is pinned to patch 16.23.1 and will age; and
+two Fearless variants are implemented out of more that exist in the wild.
 
-- **What is simulated:**
-- **Sample size:**
-- **What we did not build:**
-- **Where it would break in production:**
+## Licence
 
-## Sources
+MIT — see [LICENSE](LICENSE).
 
+Fearless is not endorsed by, sponsored by or affiliated with Riot Games. Champion names come
+from Riot's Data Dragon, the static data Riot publishes for community tools. No Riot artwork
+is used.

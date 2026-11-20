@@ -5,3 +5,9 @@ node_modules/
 .npm-cache/
 dist/
 coverage/
+
+# JetBrains: commit .idea/ as evidence, but not per-machine churn
+.idea/workspace.xml
+.idea/shelf/
+.idea/usage.statistics.xml
+.idea/httpRequests/

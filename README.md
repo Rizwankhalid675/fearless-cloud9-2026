@@ -55,7 +55,7 @@ Bonus prize (Best AI-Powered Workflow Story): [`docs/JETBRAINS.md`](docs/JETBRAI
 | Rules engine vs hand-computed ground truth | **10 / 10 fixtures exact** |
 | Illegal suggestions caught by the gate | **21 of 50 (42%)** |
 | Champion catalogue | 173 champions, Data Dragon patch 16.23.1, committed |
-| Tests | **102**, no network, no API key |
+| Tests | **102 passing**, no network, no API key (plus 10 skipped — a written-down spec for the accessibility work in [`docs/LIMITS.md`](docs/LIMITS.md)) |
 
 Regenerate both with `npm run measure`. Numbers are written by that script, not by hand.
 

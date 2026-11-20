@@ -1,0 +1,11 @@
+{
+  "note": "Hand-written priority tiers. OPINION, not data — see docs/LIMITS.md. Tier 1 is premium, 3 situational; anything absent is tier 4. This exists to model what a coach's priority sheet looks like, which is the artefact Fearless replaces.",
+  "patch": "16.23",
+  "tiers": {
+    "Aatrox": 1, "Ambessa": 1, "KSante": 1, "Jax": 2, "Renekton": 2, "Gnar": 2, "Gwen": 2, "Rumble": 3, "Camille": 3, "Sett": 3,
+    "Viego": 1, "LeeSin": 1, "Sejuani": 2, "Maokai": 2, "Vi": 2, "MonkeyKing": 2, "Nidalee": 3, "JarvanIV": 3, "Poppy": 3, "Skarner": 3,
+    "Azir": 1, "Orianna": 1, "Ahri": 2, "Syndra": 2, "Hwei": 2, "Taliyah": 2, "Yone": 3, "Sylas": 3, "Akali": 3, "Viktor": 3,
+    "Caitlyn": 1, "Jinx": 1, "Varus": 2, "Ezreal": 2, "Kaisa": 2, "Ashe": 2, "Zeri": 3, "Jhin": 3, "Xayah": 3, "Aphelios": 3,
+    "Nautilus": 1, "Rakan": 1, "Leona": 2, "Lulu": 2, "Renata": 2, "Milio": 2, "Braum": 3, "Alistar": 3, "Karma": 3, "Rell": 3
+  }
+}

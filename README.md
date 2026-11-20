@@ -6,6 +6,11 @@ Cloud9 x JetBrains: Sky's The Limit 2026 · Category 2 (LoL macro scouting & dra
 
 **Live demo:** _pending first deploy_ · **Video:** _pending_ · **Limits:** [what this does not do](docs/LIMITS.md) · **Numbers:** [measured results](docs/RESULTS.md)
 
+![The Fearless board at game 4 of a best-of-five: 30 champions burned, and 4 of the advisor's 5 suggestions blocked by the rules engine](docs/img/board-game4.jpg)
+
+*Game 4 of 5. 136 available, 37 gone. The advisor proposed five champions; the rules engine
+refused four of them and named the game that burned each one.*
+
 ---
 
 ## The problem
@@ -63,7 +68,7 @@ npm run dev
 Then press **Load a demo series** — three completed games, 30 champions burned, game 4
 mid-draft. No API key and no network needed: the default advisor is offline.
 
-## How it works
+## Architecture
 
 ```
                  ┌──────────────────┐
@@ -75,6 +80,8 @@ mid-draft. No API key and no network needed: the default advisor is offline.
                  │  legalityOf()    │  ◀── the only authority on availability
                  └──────────────────┘
 ```
+
+### Repo map
 
 | File | Does |
 |---|---|
@@ -101,10 +108,24 @@ inside the advisor instead of shown on screen.
 
 ## Honest limits
 
-Named in full in [`docs/LIMITS.md`](docs/LIMITS.md). The short version: champion roles are a
-convenience filter derived from Data Dragon tags and are not ground truth; the priority tiers
-are one person's opinion; the champion snapshot is pinned to patch 16.23.1 and will age; and
-two Fearless variants are implemented out of more that exist in the wild.
+Named in full in [`docs/LIMITS.md`](docs/LIMITS.md). The ones that would matter first:
+
+- **Two Fearless variants are implemented, out of more that exist in the wild.** Leagues also
+  burn bans, burn only from games a team won, or cap the burn at a number of games.
+- **Champion roles are a convenience filter, not ground truth.** They are widened from Data
+  Dragon `tags`, which classify a champion rather than place it.
+- **The priority tiers are one person's opinion**, cover 50 champions, and reflect one view
+  of patch 16.23. Everything unlisted is tier 4.
+- **The champion snapshot is pinned to patch 16.23.1 and will age.** It is committed so the
+  demo runs offline and a judge sees what the video shows; `npm run champions` refreshes it.
+- **The model advisor is optional and unmeasured here.** `docs/RESULTS.md` leaves its rows
+  absent rather than estimated, because no API key was set on the run that produced it.
+- **No scouting data.** No win rates, no opponent tendencies, no GRID integration.
+
+## Provenance
+
+Newly created for this hackathon: the first commit of project code is dated 20 November 2026,
+three days after the submission period opened. Nothing here predates the event.
 
 ## Licence
 

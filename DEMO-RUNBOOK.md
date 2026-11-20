@@ -1,39 +1,39 @@
-# Demo runbook — cloud9-jetbrains-2026
+# Demo runbook
+
+The demo is one path. It needs no network, no API key and no sign-in, and it starts from a
+committed fixture so it is the same every time.
+
+```bash
+npm install && npm run dev
+```
+
+Open the board, press **Load a demo series**. That is the whole setup.
 
 ## The 90-second beat sheet
 
-Beat 0 opens with **the number**, never the architecture. The last two beats
-volunteer one honest limitation, then end on the live URL and the repo.
+| # | Beat | On screen | The point |
+|---|---|---|---|
+| 1 | Open on game 1 | Empty board, 173 champions available, clock paused | A draft board, nothing special yet |
+| 2 | Load the demo series | Jumps to game 4 of 5, three games complete | Three games in, 30 champions burned |
+| 3 | Scroll the pool | Struck-through names with coloured G1/G2/G3 chips; count reads 136 available, 37 gone | Nothing disappears — every burn names the game that took it |
+| 4 | Ask the advisor | Panel fills; banner reads 4 of 5 blocked by the rules engine | The advisor has no idea what is legal |
+| 5 | Read one blocked row | "Aatrox is burned — blue picked it in game 1", struck through, G1 chip | The model proposes, deterministic code decides |
+| 6 | Type `amb`, press Enter | Ambessa locks into red's pick; clock starts | Built for a 30-second timer |
+| 7 | Export, reload, import | Same state returns | A dead laptop between games costs nothing |
+| 8 | `npm test` | 102 passing | The engine is not asserted, it is tested |
 
-| # | Say | Do | They should see | If it breaks |
-|---|---|---|---|---|
-| 0 | | | | |
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+## If something goes wrong
 
-## Before you present
-
-- [ ] `./scripts/demo-reset.sh` run; state is pristine
-- [ ] Rehearsed 3x, with a reset between each
-- [ ] Second terminal open, `demo-reset.sh` typed and ready (not run)
-- [ ] Browser tabs pre-opened in order, zoom set, notifications off
-- [ ] Offline fallback ready (recorded GIF / screenshots) in case WiFi dies
-- [ ] Battery charged, laptop plugged in, dongle tested on the actual projector
-
-## Known failure modes and the fix
-
-| Symptom | Cause | Fix mid-demo |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Service down | | `./scripts/demo-up.sh` |
-| Stale state after a rehearsal | | `./scripts/demo-reset.sh` |
-| Model call times out | | switch to the cached/seeded path: |
-| WiFi dies | | play the recorded fallback, keep talking |
+| Board loads but the pool is empty | `src/data/champions.json` missing | `npm run champions` (needs network), or `git checkout src/data/champions.json` |
+| **Load a demo series** is not shown | The button only appears on an untouched series | Reload the page |
+| Suggestions panel shows an error | The model advisor is selected without a valid key | Untick "Use a model instead of the priority sheet" |
+| Clock reads 0:00 | It was left running | Press **Start clock**, or reload |
 
-## The three questions they will ask
+## What not to demo
 
-1. "How do you know the model didn't make that up?" →
-2. "What happens when it fails?" →
-3. "What's real here vs mocked?" →
+- The model advisor, unless a key is to hand and the network is reliable. The offline
+  priority sheet makes the same point and cannot fail.
+- Importing a hand-edited file. It is handled, and the problem list is good, but it is not
+  the story.

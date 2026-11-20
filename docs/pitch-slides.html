@@ -60,20 +60,20 @@
   <!-- 1. PROBLEM — open with the number, never the architecture -->
   <section class="slide on">
     <div class="eyebrow">The problem</div>
-    <div class="big">{{BIG_NUMBER}}</div>
-    <h2 style="margin-top:1.2rem">{{PROBLEM_HEADLINE}}</h2>
-    <p class="lead">{{PROBLEM_DETAIL}}</p>
+    <div class="big">21 of 50</div>
+    <h2 style="margin-top:1.2rem">By game five, fifty champions are gone</h2>
+    <p class="lead">Fearless Draft bans every champion used in earlier games of a series. Coaches track that in a spreadsheet, on a thirty-second timer, on stage.</p>
   </section>
 
   <!-- 2. SOLUTION -->
   <section class="slide">
     <div class="eyebrow">cloud9-jetbrains-2026</div>
-    <h1>{{ONE_LINE}}</h1>
-    <p class="lead">{{SOLUTION_DETAIL}}</p>
+    <h1>A draft organiser that cannot propose an illegal pick.</h1>
+    <p class="lead">A pure rules engine owns champion availability. An advisor proposes; every suggestion passes through that engine before it can be rendered, and an illegal one is shown struck through with the game that burned it.</p>
     <div class="grid">
-      <div class="card"><div class="n">{{METRIC_1}}</div><div class="l">{{METRIC_1_LABEL}}</div></div>
-      <div class="card"><div class="n">{{METRIC_2}}</div><div class="l">{{METRIC_2_LABEL}}</div></div>
-      <div class="card"><div class="n">{{METRIC_3}}</div><div class="l">{{METRIC_3_LABEL}}</div></div>
+      <div class="card"><div class="n">10 / 10</div><div class="l">fixtures where the engine matches hand-computed ground truth</div></div>
+      <div class="card"><div class="n">102</div><div class="l">tests, no network and no API key</div></div>
+      <div class="card"><div class="n">173</div><div class="l">champions, patch 16.23.1, committed so the demo runs offline</div></div>
     </div>
   </section>
 
@@ -82,40 +82,40 @@
     <div class="eyebrow">How it works</div>
     <h2>A model proposes. Code decides.</h2>
     <div class="flow">
-      <div class="node">{{INPUT}}</div><span class="arrow">&rarr;</span>
+      <div class="node">Series state: completed games, current draft</div><span class="arrow">&rarr;</span>
       <div class="node">LLM proposal</div><span class="arrow">&rarr;</span>
       <div class="node hot">Deterministic check</div><span class="arrow">&rarr;</span>
       <div class="node">Evidence receipt</div><span class="arrow">&rarr;</span>
-      <div class="node">{{OUTPUT}}</div>
+      <div class="node">Legal pool, and a verdict on every suggestion</div>
     </div>
-    <p class="lead" style="margin-top:1.6rem">{{ARCH_DETAIL}}</p>
+    <p class="lead" style="margin-top:1.6rem">advisor proposes &rarr; gateSuggestions() &rarr; rules engine decides &rarr; screen. The engine is the only code allowed to say what is legal.</p>
   </section>
 
   <!-- 4. PROOF — the before/after progression table -->
   <section class="slide">
     <div class="eyebrow">Measured, not claimed</div>
-    <h2>{{PROOF_HEADLINE}}</h2>
+    <h2>Illegal suggestions the gate refused</h2>
     <table>
       <thead><tr><th>Version</th><th>What changed</th><th>Result</th><th>Gate</th></tr></thead>
       <tbody>
-        <tr><td>v1</td><td>{{V1_CHANGE}}</td><td>{{V1_RESULT}}</td><td>BLOCKED</td></tr>
-        <tr><td>v2</td><td>{{V2_CHANGE}}</td><td>{{V2_RESULT}}</td><td>BLOCKED</td></tr>
-        <tr><td>v3</td><td>{{V3_CHANGE}}</td><td>{{V3_RESULT}}</td><td>PASSED</td></tr>
+        <tr><td>v1</td><td>Advisor filtered its own suggestions against the legal pool</td><td>0 blocked — the gate never fired, so the whole mechanism was invisible unless you supplied an API key</td><td>BLOCKED</td></tr>
+        <tr><td>v2</td><td>Made the default advisor pool-blind: a priority sheet, like the artefact coaches actually use</td><td>21 of 50 blocked offline — the gate is demonstrable with no key and no network</td><td>BLOCKED</td></tr>
+        <tr><td>v3</td><td>Gave every fixture an expected pool size computed by hand arithmetic, not by legalPool()</td><td>10 of 10 exact — the engine is now checked against arithmetic rather than against itself</td><td>PASSED</td></tr>
       </tbody>
     </table>
-    <p class="lead" style="margin-top:1.2rem">{{PROOF_SOURCE}}</p>
+    <p class="lead" style="margin-top:1.2rem">npm run measure, across 10 ground-truth series states</p>
   </section>
 
   <!-- 5. WHAT'S NEXT + honest limit -->
   <section class="slide">
     <div class="eyebrow">What's next</div>
-    <h2>{{NEXT_HEADLINE}}</h2>
+    <h2>What comes next</h2>
     <div class="grid">
-      <div class="card"><div class="n">Today</div><div class="l">{{TODAY}}</div></div>
-      <div class="card"><div class="n">Next</div><div class="l">{{NEXT}}</div></div>
-      <div class="card"><div class="n">Honest limit</div><div class="l">{{LIMIT}}</div></div>
+      <div class="card"><div class="n">Today</div><div class="l">20 November 2026</div></div>
+      <div class="card"><div class="n">Next</div><div class="l">A third ruleset variant, a curated role table, and a shared session so an analyst and a coach can drive one board.</div></div>
+      <div class="card"><div class="n">Honest limit</div><div class="l">Two Fearless variants out of more that exist in the wild; champion roles are a filter derived from Data Dragon tags, not ground truth; the priority tiers are opinion.</div></div>
     </div>
-    <p class="lead" style="margin-top:1.8rem">{{LIVE_URL}}</p>
+    <p class="lead" style="margin-top:1.8rem">see the README for the live demo link</p>
   </section>
 
 </div>

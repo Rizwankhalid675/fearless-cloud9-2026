@@ -9,8 +9,15 @@ You own one lane. Edit only the files in your lane's area.
 
 | Lane | Owner | File area | Status |
 |---|---|---|---|
-| contracts | integrator | `contracts.ts`, `src/shared/**` | frozen |
-| _add lanes here_ | | | |
+| contracts | integrator | `contracts.ts` | frozen — every lane imports it |
+| engine | integrator | `src/engine/**` | frozen — 46 tests and the ground-truth fixtures depend on it |
+| advisor | — | `src/advisor/**` | open — but the gate stays the only path to the screen |
+| ui | — | `src/ui/**` | open |
+| data | — | `src/data/**`, `scripts/fetch-champions.ts` | open — regenerate, never hand-edit `champions.json` |
+| docs | — | `README.md`, `docs/**`, `VIDEO.md` | open |
+
+`docs/JETBRAINS.md` is owned by a **person**, not an agent: it is evidence of real
+JetBrains use and must not be filled in from anything but what actually happened.
 
 If your work seems to require a file outside your area: **stop and report it**.
 Do not "just quickly" fix it. That is how two agents overwrite each other.

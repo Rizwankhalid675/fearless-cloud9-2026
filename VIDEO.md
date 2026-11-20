@@ -1,5 +1,18 @@
 # Demo video — under 3 minutes, public on YouTube
 
+**Published: <https://youtu.be/A_UkgPpzhfM> — 1:38, public.**
+
+Built by `video/capture.mjs` (drives the real app in a real browser at 1080p and
+photographs it, each beat held for the length of its narration file) and
+`video/build.py` (cuts the frames, lays the ElevenLabs narration, writes the SRT).
+Regenerate with `node video/capture.mjs && python3 video/build.py`.
+
+**One thing left for a person:** `video/fearless-demo.srt` is not attached to the
+video. YouTube's subtitle uploader only accepts a file chosen through its own
+native file picker, which cannot be driven from here. Automatic captions are
+enabled and cover it; to use the exact ones instead, go to Subtitles → English →
+Add → Upload file → With timing and pick `video/fearless-demo.srt`.
+
 The judging criterion is "Does the video clearly demonstrate the project working end-to-end?"
 So: no slides, no architecture diagram, no talking head. The board, doing the thing.
 

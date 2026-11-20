@@ -4,7 +4,7 @@
 
 Cloud9 x JetBrains: Sky's The Limit 2026 · Category 2 (LoL macro scouting & draft management) · also entered for the JetBrains evidence bonus
 
-**[Live demo](https://rizwankhalid675.github.io/fearless-cloud9-2026/)** — press *Load a demo series* · **Video:** _pending_ · **Limits:** [what this does not do](docs/LIMITS.md) · **Numbers:** [measured results](docs/RESULTS.md)
+**[Live demo](https://rizwankhalid675.github.io/fearless-cloud9-2026/)** — press *Load a demo series* · **[Demo video, 1:38](https://youtu.be/A_UkgPpzhfM)** · **Limits:** [what this does not do](docs/LIMITS.md) · **Numbers:** [measured results](docs/RESULTS.md)
 
 ![The Fearless board at game 4 of a best-of-five: 30 champions burned, and 4 of the advisor's 5 suggestions blocked by the rules engine](docs/img/board-game4.jpg)
 

@@ -8,6 +8,9 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: "jsdom",
+    // worker_threads rather than the default forks pool: forks talk over a unix
+    // socket, which a sandboxed CI or dev box may refuse to let us bind.
+    pool: "threads",
     globals: true,
     setupFiles: ["./tests/setup.ts"],
     include: ["tests/**/*.test.{ts,tsx}"],

@@ -1,0 +1,1414 @@
+{
+  "version": "16.23.1",
+  "champions": [
+    {
+      "id": "Aatrox",
+      "name": "Aatrox",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Ahri",
+      "name": "Ahri",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Akali",
+      "name": "Akali",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Akshan",
+      "name": "Akshan",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Alistar",
+      "name": "Alistar",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Ambessa",
+      "name": "Ambessa",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Amumu",
+      "name": "Amumu",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Anivia",
+      "name": "Anivia",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Annie",
+      "name": "Annie",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Aphelios",
+      "name": "Aphelios",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Ashe",
+      "name": "Ashe",
+      "roles": [
+        "bot",
+        "support"
+      ]
+    },
+    {
+      "id": "AurelionSol",
+      "name": "Aurelion Sol",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Aurora",
+      "name": "Aurora",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Azir",
+      "name": "Azir",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Bard",
+      "name": "Bard",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Belveth",
+      "name": "Bel'Veth",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Blitzcrank",
+      "name": "Blitzcrank",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Brand",
+      "name": "Brand",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Braum",
+      "name": "Braum",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Briar",
+      "name": "Briar",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Camille",
+      "name": "Camille",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Cassiopeia",
+      "name": "Cassiopeia",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Chogath",
+      "name": "Cho'Gath",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Corki",
+      "name": "Corki",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Darius",
+      "name": "Darius",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Diana",
+      "name": "Diana",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Draven",
+      "name": "Draven",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "DrMundo",
+      "name": "Dr. Mundo",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Ekko",
+      "name": "Ekko",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Elise",
+      "name": "Elise",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Evelynn",
+      "name": "Evelynn",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Ezreal",
+      "name": "Ezreal",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Fiddlesticks",
+      "name": "Fiddlesticks",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Fiora",
+      "name": "Fiora",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Fizz",
+      "name": "Fizz",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Galio",
+      "name": "Galio",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Gangplank",
+      "name": "Gangplank",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Garen",
+      "name": "Garen",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Gnar",
+      "name": "Gnar",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Gragas",
+      "name": "Gragas",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Graves",
+      "name": "Graves",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Gwen",
+      "name": "Gwen",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Hecarim",
+      "name": "Hecarim",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Heimerdinger",
+      "name": "Heimerdinger",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Hwei",
+      "name": "Hwei",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Illaoi",
+      "name": "Illaoi",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Irelia",
+      "name": "Irelia",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Ivern",
+      "name": "Ivern",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Janna",
+      "name": "Janna",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "JarvanIV",
+      "name": "Jarvan IV",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Jax",
+      "name": "Jax",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Jayce",
+      "name": "Jayce",
+      "roles": [
+        "bot",
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Jhin",
+      "name": "Jhin",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Jinx",
+      "name": "Jinx",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Kaisa",
+      "name": "Kai'Sa",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Kalista",
+      "name": "Kalista",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Karma",
+      "name": "Karma",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Karthus",
+      "name": "Karthus",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Kassadin",
+      "name": "Kassadin",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Katarina",
+      "name": "Katarina",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Kayle",
+      "name": "Kayle",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Kayn",
+      "name": "Kayn",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Kennen",
+      "name": "Kennen",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Khazix",
+      "name": "Kha'Zix",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Kindred",
+      "name": "Kindred",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Kled",
+      "name": "Kled",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "KogMaw",
+      "name": "Kog'Maw",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "KSante",
+      "name": "K'Sante",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Leblanc",
+      "name": "LeBlanc",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "LeeSin",
+      "name": "Lee Sin",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Leona",
+      "name": "Leona",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Lillia",
+      "name": "Lillia",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Lissandra",
+      "name": "Lissandra",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Locke",
+      "name": "Locke",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Lucian",
+      "name": "Lucian",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Lulu",
+      "name": "Lulu",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Lux",
+      "name": "Lux",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Malphite",
+      "name": "Malphite",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Malzahar",
+      "name": "Malzahar",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Maokai",
+      "name": "Maokai",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "MasterYi",
+      "name": "Master Yi",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Mel",
+      "name": "Mel",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Milio",
+      "name": "Milio",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "MissFortune",
+      "name": "Miss Fortune",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "MonkeyKing",
+      "name": "Wukong",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Mordekaiser",
+      "name": "Mordekaiser",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Morgana",
+      "name": "Morgana",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Naafiri",
+      "name": "Naafiri",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Nami",
+      "name": "Nami",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Nasus",
+      "name": "Nasus",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Nautilus",
+      "name": "Nautilus",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Neeko",
+      "name": "Neeko",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Nidalee",
+      "name": "Nidalee",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Nilah",
+      "name": "Nilah",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Nocturne",
+      "name": "Nocturne",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Nunu",
+      "name": "Nunu & Willump",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Olaf",
+      "name": "Olaf",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Orianna",
+      "name": "Orianna",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Ornn",
+      "name": "Ornn",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Pantheon",
+      "name": "Pantheon",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Poppy",
+      "name": "Poppy",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Pyke",
+      "name": "Pyke",
+      "roles": [
+        "jungle",
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Qiyana",
+      "name": "Qiyana",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Quinn",
+      "name": "Quinn",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Rakan",
+      "name": "Rakan",
+      "roles": [
+        "support"
+      ]
+    },
+    {
+      "id": "Rammus",
+      "name": "Rammus",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "RekSai",
+      "name": "Rek'Sai",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Rell",
+      "name": "Rell",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Renata",
+      "name": "Renata Glasc",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Renekton",
+      "name": "Renekton",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Rengar",
+      "name": "Rengar",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Riven",
+      "name": "Riven",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Rumble",
+      "name": "Rumble",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Ryze",
+      "name": "Ryze",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Samira",
+      "name": "Samira",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Sejuani",
+      "name": "Sejuani",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Senna",
+      "name": "Senna",
+      "roles": [
+        "bot",
+        "support"
+      ]
+    },
+    {
+      "id": "Seraphine",
+      "name": "Seraphine",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Sett",
+      "name": "Sett",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Shaco",
+      "name": "Shaco",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Shen",
+      "name": "Shen",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Shyvana",
+      "name": "Shyvana",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Singed",
+      "name": "Singed",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Sion",
+      "name": "Sion",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Sivir",
+      "name": "Sivir",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Skarner",
+      "name": "Skarner",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Smolder",
+      "name": "Smolder",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Sona",
+      "name": "Sona",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Soraka",
+      "name": "Soraka",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Swain",
+      "name": "Swain",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Sylas",
+      "name": "Sylas",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Syndra",
+      "name": "Syndra",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "TahmKench",
+      "name": "Tahm Kench",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Taliyah",
+      "name": "Taliyah",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Talon",
+      "name": "Talon",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Taric",
+      "name": "Taric",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Teemo",
+      "name": "Teemo",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Thresh",
+      "name": "Thresh",
+      "roles": [
+        "jungle",
+        "support",
+        "top"
+      ]
+    },
+    {
+      "id": "Tristana",
+      "name": "Tristana",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Trundle",
+      "name": "Trundle",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Tryndamere",
+      "name": "Tryndamere",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "TwistedFate",
+      "name": "Twisted Fate",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Twitch",
+      "name": "Twitch",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Udyr",
+      "name": "Udyr",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Urgot",
+      "name": "Urgot",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "roles": [
+        "bot",
+        "mid"
+      ]
+    },
+    {
+      "id": "Vayne",
+      "name": "Vayne",
+      "roles": [
+        "bot",
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Veigar",
+      "name": "Veigar",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Velkoz",
+      "name": "Vel'Koz",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Vex",
+      "name": "Vex",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Vi",
+      "name": "Vi",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Viego",
+      "name": "Viego",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Viktor",
+      "name": "Viktor",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Vladimir",
+      "name": "Vladimir",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Volibear",
+      "name": "Volibear",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Warwick",
+      "name": "Warwick",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Xayah",
+      "name": "Xayah",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Xerath",
+      "name": "Xerath",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "XinZhao",
+      "name": "Xin Zhao",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Yasuo",
+      "name": "Yasuo",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Yone",
+      "name": "Yone",
+      "roles": [
+        "jungle",
+        "mid",
+        "top"
+      ]
+    },
+    {
+      "id": "Yorick",
+      "name": "Yorick",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Yunara",
+      "name": "Yunara",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Yuumi",
+      "name": "Yuumi",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Zaahen",
+      "name": "Zaahen",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Zac",
+      "name": "Zac",
+      "roles": [
+        "jungle",
+        "top"
+      ]
+    },
+    {
+      "id": "Zed",
+      "name": "Zed",
+      "roles": [
+        "jungle",
+        "mid"
+      ]
+    },
+    {
+      "id": "Zeri",
+      "name": "Zeri",
+      "roles": [
+        "bot"
+      ]
+    },
+    {
+      "id": "Ziggs",
+      "name": "Ziggs",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Zilean",
+      "name": "Zilean",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    },
+    {
+      "id": "Zoe",
+      "name": "Zoe",
+      "roles": [
+        "mid"
+      ]
+    },
+    {
+      "id": "Zyra",
+      "name": "Zyra",
+      "roles": [
+        "mid",
+        "support"
+      ]
+    }
+  ]
+}

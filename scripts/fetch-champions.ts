@@ -30,10 +30,10 @@ const VERSIONS = "https://ddragon.leagueoflegends.com/api/versions.json";
 const TAG_ROLES: Record<string, Role[]> = {
   Marksman: ["bot"],
   Support: ["support"],
-  Tank: ["top", "support"],
+  Tank: ["top", "jungle"],
   Fighter: ["top", "jungle"],
   Assassin: ["mid", "jungle"],
-  Mage: ["mid", "support"],
+  Mage: ["mid"],
 };
 
 interface DDragonChampion {

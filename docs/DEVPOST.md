@@ -1,14 +1,19 @@
 # Devpost submission — Fearless
 
-Draft submission: <https://devpost.com/submit-to/31571-cloud9-x-jetbrains-sky-s-the-limit-hackathon-2026/manage/submissions/1313675-fearless>
+Project page: <https://devpost.com/software/fearless-rl2h3u> (currently marked
+INCOMPLETE SUBMISSION)
+Edit it: <https://devpost.com/submit-to/31571-cloud9-x-jetbrains-sky-s-the-limit-hackathon-2026/manage/submissions/1313675-fearless>
 
-Every answer below is already typed into the form. This file exists so the text
-is versioned and can be pasted back if the form ever loses it.
+Every answer below is saved in the form and verified by reloading the page.
+This file exists so the text is versioned and can be pasted back if the form
+ever loses it.
 
 **Deadline: 12 January 2027, 11:00 PT.** The submission is a DRAFT until the
 fields in "Still to answer" are filled and Submit is pressed.
 
-## Filled in
+## Confirmed saved
+
+Verified by reloading each step after saving, not by trusting the save.
 
 | Field | Answer |
 |---|---|
@@ -25,9 +30,15 @@ fields in "Still to answer" are filled and Submit is pressed.
 | Repo URL | <https://github.com/Rizwankhalid675/fearless-cloud9-2026> |
 | Demo URL | <https://rizwankhalid675.github.io/fearless-cloud9-2026/> |
 
-The project story, the methodology write-up, the testing instructions and the
-AI-tools answer are all typed into the form; the story is also effectively the
-README, and the methodology is a condensed version of it.
+The project story (7,091 chars), the methodology write-up (2,081), the judge
+testing instructions (630) and the AI-tools answer (569) are all saved, and the
+public project page renders them.
+
+One practical note if anyone automates this form later: setting a field's value
+with JavaScript looks like it works and silently does not save. The first pass
+at this step appeared to succeed -- the URL advanced, no errors -- and every
+field came back empty on reload. Values have to go in through real input
+events.
 
 ## Still to answer — these need a person
 

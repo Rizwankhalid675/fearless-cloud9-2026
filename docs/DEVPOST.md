@@ -56,6 +56,19 @@ declaration that is not mine to make.
 | How likely are you to use JetBrains tools again? | Same. |
 | The eligibility attestations (age of majority, eligible jurisdiction, not an employee of the sponsors) | Legal declarations about you. Tick them yourself. |
 
+## Verified on 20 Nov 2026
+
+- Deployed assets match the local build from HEAD exactly (`index-CfbdfETJ.js`,
+  `index-BePOrruP.css`) — the live site is the submitted repo, not a stale build.
+- Live board, cache-busted: demo loads (136 available / 37 gone / 30 burn chips),
+  advisor returns "4 of 5 blocked by the rules engine" with the right reasons.
+- No horizontal overflow at 320, 360, 375, 414, 570, 720, 860, 900, 980, 1100,
+  1280, 1440 and 1600px.
+- Devpost page: both links resolve, video embeds, screenshot present, and all five
+  headline numbers match `docs/RESULTS.md`.
+- Story now links `docs/JUDGE-WALKTHROUGH.md`, states the 10 skipped tests, and
+  names the accessibility gap in the limits.
+
 ## The order to do it in
 
 1. Install WebStorm with the All Products Pack code from the registration email.

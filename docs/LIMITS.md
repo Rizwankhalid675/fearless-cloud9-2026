@@ -63,7 +63,16 @@ and it is not authoritative about anything.
 reasons from a static tier list or from a model's own knowledge, not from match history.
 
 **Below 860px the board stops being one screen** and stacks. A phone is for reviewing a
-series, not drafting one.
+series, not drafting one. Verified to have no horizontal overflow at 320, 340, 360, 375,
+400, 480, 570, 720, 860, 900, 980, 1100 and 1440px.
+
+**The champion pool is not yet keyboard-navigable, and its buttons are announced
+wrongly.** `role="listitem"` on a `<button>` overrides the native button role, so
+assistive technology never announces that a champion can be activated. There are no
+arrow-key moves through the grid, and nothing announces the turn changing. The fix is
+specified by failing tests in `tests/keyboard.test.tsx` (currently `describe.skip` so the
+branch stays green) and briefed in `docs/JETBRAINS.md`. Typing to search and pressing
+Enter does work today.
 
 ## Riot
 

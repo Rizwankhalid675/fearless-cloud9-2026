@@ -2,9 +2,11 @@
 
 **A Fearless Draft organiser for League of Legends coaches that cannot propose an illegal pick.**
 
-Cloud9 x JetBrains: Sky's The Limit 2026 · Category 2 (LoL macro scouting & draft management) · also entered for the JetBrains evidence bonus
+Cloud9 x JetBrains: Sky's The Limit 2026 · Category 2 (LoL macro scouting & draft management)
 
-**[Live demo](https://rizwankhalid675.github.io/fearless-cloud9-2026/)** — press *Load a demo series* · **[Demo video, 1:38](https://youtu.be/A_UkgPpzhfM)** · **Limits:** [what this does not do](docs/LIMITS.md) · **Numbers:** [measured results](docs/RESULTS.md)
+**[Live demo](https://rizwankhalid675.github.io/fearless-cloud9-2026/)** — press *Load a demo series* · **[Demo video, 1:38](https://youtu.be/A_UkgPpzhfM)**
+
+**Judging this?** [`docs/JUDGE-WALKTHROUGH.md`](docs/JUDGE-WALKTHROUGH.md) is a five-minute path through the product, how to verify every number, and straight answers to the obvious hard questions. · **Limits:** [what this does not do](docs/LIMITS.md) · **Numbers:** [measured results](docs/RESULTS.md)
 
 ![The Fearless board at game 4 of a best-of-five: 30 champions burned, and 4 of the advisor's 5 suggestions blocked by the rules engine](docs/img/board-game4.jpg)
 
@@ -38,13 +40,13 @@ illegal. The gate caught all of them.
 
 | Criterion | Weight | How it is met | Where to see it |
 |---|---:|---|---|
-| Technological Implementation | 20% | Pure TypeScript rules engine, 102 tests, verified against hand-computed ground truth on 10 fixtures — 10/10 exact. Built in WebStorm with `.idea/` committed. | [`src/engine/fearless.ts`](src/engine/fearless.ts), [`docs/RESULTS.md`](docs/RESULTS.md) |
+| Technological Implementation | 20% | Pure TypeScript rules engine, 102 tests, verified against hand-computed ground truth on 10 fixtures — 10/10 exact. JetBrains tool use is written up in [`docs/JETBRAINS.md`](docs/JETBRAINS.md). | [`src/engine/fearless.ts`](src/engine/fearless.ts), [`docs/RESULTS.md`](docs/RESULTS.md) |
 | Design | 20% | One screen, no scrolling during a draft, laid out the way coaches already read the game client. Type to search, Enter to lock. All 19 text styles verified against WCAG AA in the browser. | [`src/ui/`](src/ui/) |
 | Potential Impact | 20% | Replaces the spreadsheet the category brief names, for a job where being wrong is public. Both Fearless rulesets supported, because leagues differ. | [`docs/LIMITS.md`](docs/LIMITS.md) |
 | Quality of the Idea | 20% | Not "AI picks your draft". The interesting half is refusing the AI: a gate that keeps every illegal suggestion visible so the coach learns why it is gone. | [`src/advisor/gate.ts`](src/advisor/gate.ts) |
 | Presentation | 20% | Video shows game 4 with 30 champions burned and the gate blocking 4 of 5 suggestions, end to end. | [`VIDEO.md`](VIDEO.md) |
 
-Bonus prize (JetBrains evidence): [`docs/JETBRAINS.md`](docs/JETBRAINS.md).
+Bonus prize (Best AI-Powered Workflow Story): [`docs/JETBRAINS.md`](docs/JETBRAINS.md).
 
 ## The measured numbers
 

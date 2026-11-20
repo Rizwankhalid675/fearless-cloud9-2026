@@ -2,9 +2,16 @@
 
 > **Status: NOT YET TRUE. This document is a frame, not a record.**
 >
-> The bonus prize is judged only on "how clearly and completely they show the team's use of
-> JetBrains IDEs, AI Coding Agent Junie or JetBrains Air". The mandatory requirement is
-> stronger than the bonus: the project **must** be built with at least one JetBrains tool.
+> Two separate things rest on this document.
+>
+> **The mandatory requirement**, which is the stronger of the two: the project **must** be
+> built with at least one JetBrains tool, and the Devpost form has three required fields
+> asking which tools were used and how the project meets that requirement.
+>
+> **The $1,000 bonus prize**, which is *Best AI-Powered Workflow Story* — "show us how AI
+> accelerated your build", submitted as a short case study or short video with a direct URL.
+> That is a narrative about problems solved, not a gallery of screenshots. Write it as the
+> story of a build: what was hard, what the tool did about it, what it got wrong.
 >
 > At the time of writing this repository has been built in a terminal agent, not in a
 > JetBrains IDE, and there is no `.idea/` directory. Filling this document with invented
@@ -51,6 +58,14 @@ One each, saved to `docs/img/jetbrains/`:
 For each tool, three things, in plain sentences: what it was used for, one specific thing it
 did that would have been slower by hand, and one thing it got wrong. The third is what makes
 the first two credible.
+
+Because the bonus is judged as a *story*, structure it as one — a problem, what you reached
+for, what happened, what you'd do differently — rather than as a list of features used. The
+repo already contains four such stories from this build that you can model the shape on, in
+the Challenges section of the Devpost story: the demo generator refusing its own data, the
+advisor that filtered itself, the 978px overflow found only once deployed, and the burned
+champion names failing contrast at 2.88:1. Each is a problem, a wrong first guess, and what
+the fix turned out to be.
 
 ## 5. Suggested work to do in the IDE
 

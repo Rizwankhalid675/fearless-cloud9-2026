@@ -55,7 +55,7 @@ ratio on the whole eligible board, by a wide margin. Smaller cheque, far better 
 
 That is the whole technical requirement. Any language, any stack — it just has to be built in
 a JetBrains IDE, and you should commit the `.idea`, `.junie` or `.air` folder as evidence
-("we encourage committing" it; the bonus prize is judged on exactly this).
+("we encourage committing" it). Note the bonus prize is NOT only about this — see §6.
 
 > "Projects must be either newly created by the Entrant or, if the Entrant's Project existed
 > prior to the Hackathon Submission Period, must have been **significantly updated** after the
@@ -87,11 +87,25 @@ assets and presentation rather than recreating Riot content."
 |---|---:|---|
 | Best of Category | $6,000 | $100 Cloud9 store card, 1-year JetBrains All Products Pack, **GDC ticket + paid flights and hotel for one** |
 | Runner-up | $2,000 | $100 store card, All Products Pack |
-| Bonus prize | $1,000 | 1 winner overall, for the clearest evidence of JetBrains tool use |
+| Bonus prize | $1,000 | 1 winner overall — **Best AI-Powered Workflow Story** |
 
-The bonus prize is judged only on "how clearly and completely they show the team's use of
-JetBrains IDEs, AI Coding Agent Junie or JetBrains Air" — a documented, screenshotted
-build-process write-up wins it. Nobody else will bother.
+**Corrected 20 Nov 2026, from the submission form itself.** This section originally said the
+bonus was for "the clearest evidence of JetBrains tool use". The live rules page and the
+Devpost form are broader than that. Verbatim:
+
+> **Bonus Prize: Best AI-Powered Workflow Story.** Show us how AI accelerated your build! To
+> be eligible for this bonus prize, submit one of the following alongside your main entry
+> (Categories 1–3): **A Short Case Study** — write a brief breakdown explaining how AI or
+> JetBrains tools helped your team build and solve key challenges. **A Short Video Demo** —
+> share a short video (suitable for social platforms or stories) demonstrating how AI tools
+> powered your build process.
+>
+> Eligible Tools: JetBrains IDEs, AI Coding Agent Junie, or JetBrains Air.
+
+So it is a story about the build process, not only a screenshot gallery, and the submission
+form asks for a **direct URL** to the write-up or video. A documented, screenshotted
+build-process write-up still wins it, and nobody else will bother — but it should be written
+as a narrative with the problems it solved, not as evidence filed for inspection.
 
 ## 7. Submission checklist
 

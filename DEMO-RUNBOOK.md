@@ -3,11 +3,15 @@
 The demo is one path. It needs no network, no API key and no sign-in, and it starts from a
 committed fixture so it is the same every time.
 
+Live, nothing to install: <https://rizwankhalid675.github.io/fearless-cloud9-2026/>
+
+Or locally:
+
 ```bash
 npm install && npm run dev
 ```
 
-Open the board, press **Load a demo series**. That is the whole setup.
+Either way: open the board and press **Load a demo series**. That is the whole setup.
 
 ## The 90-second beat sheet
 

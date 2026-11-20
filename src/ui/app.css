@@ -386,11 +386,39 @@ button.control:disabled { opacity: .4; cursor: not-allowed; }
 .problems { color: var(--warn); font-size: 12px; margin: 0; padding-left: 16px; }
 
 /* Below a laptop the three-column board stops being one screen; stack it
-   rather than pretend. A coach on a phone is reviewing, not drafting. */
+   rather than pretend. A coach on a phone is reviewing, not drafting.
+
+   Two traps here, both caught on the deployed site at 567px wide. A grid
+   column of `1fr` is really `minmax(auto, 1fr)`, and `auto` will not shrink
+   below its content — so the single column grew to 978px inside a 567px
+   window and the whole board scrolled sideways. And the pool's
+   `minmax(0, 1fr)` row has nothing to be a fraction OF once `.board` loses
+   its `max-height`, so it collapsed to 20px. Both need saying explicitly. */
 @media (max-width: 860px) {
-  .columns { grid-template-columns: 1fr; }
+  /* The real overflow source: the series bar is a nowrap flex row whose
+     children total ~978px. It cannot shrink, so the BODY grows to fit it and
+     every 100%-width descendant inherits the overflow — the stacked column
+     measured 978px inside a 567px window because of this one element, not
+     because of anything in the column itself. */
+  .series-bar { height: auto; flex-wrap: wrap; gap: 8px 12px; padding: 10px 14px; }
+  .games { flex-wrap: wrap; }
+  .bar-field.bar-spacer { margin-left: 0; width: 100%; }
+  .bar-field select.control { min-width: 0; flex: 1; }
+
+  .columns { grid-template-columns: minmax(0, 1fr); }
   .board { max-height: none; }
-  .pool { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
+  .centre { grid-template-rows: auto auto auto auto auto; }
+  .rail { overflow: visible; }
+  .pool {
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+    min-height: 44vh;
+    overflow-y: visible;
+  }
+  .advisor { max-height: none; overflow-y: visible; }
+  .turn { height: auto; padding: 10px 14px; flex-wrap: wrap; gap: 8px 14px; }
+  .clock { margin-left: 0; width: 100%; }
+  .pool-controls { flex-wrap: wrap; }
+  .search { margin-left: 0; width: 100%; }
 }
 
 .sr-only {

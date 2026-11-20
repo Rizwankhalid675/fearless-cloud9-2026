@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "champions": "node scripts/fetch-champions.ts",
-    "measure": "node scripts/measure.ts"
+    "measure": "node scripts/measure.ts",
+    "demo": "vite-node scripts/make-demo.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

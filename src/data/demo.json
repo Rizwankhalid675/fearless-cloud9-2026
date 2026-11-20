@@ -1,0 +1,224 @@
+{
+  "format": "fearless-series",
+  "formatVersion": 1,
+  "ddragonVersion": "16.23.1",
+  "exportedAt": "2026-11-20T16:54:57.091Z",
+  "series": {
+    "id": "demo-bo5-game-4",
+    "ruleset": "fearless",
+    "bestOf": 5,
+    "games": [
+      {
+        "gameNumber": 1,
+        "picks": {
+          "blue": [
+            "Aatrox",
+            "Viego",
+            "Azir",
+            "Caitlyn",
+            "Nautilus"
+          ],
+          "red": [
+            "KSante",
+            "Sejuani",
+            "Orianna",
+            "Jinx",
+            "Rakan"
+          ]
+        },
+        "bans": {
+          "blue": [
+            "Jax",
+            "Ambessa",
+            "Zeri",
+            "Taliyah",
+            "Hwei"
+          ],
+          "red": [
+            "Yone",
+            "Varus",
+            "LeeSin",
+            "Rell",
+            "Milio"
+          ]
+        }
+      },
+      {
+        "gameNumber": 2,
+        "picks": {
+          "blue": [
+            "Gnar",
+            "Maokai",
+            "Ahri",
+            "Varus",
+            "Leona"
+          ],
+          "red": [
+            "Renekton",
+            "Vi",
+            "Syndra",
+            "Ezreal",
+            "Lulu"
+          ]
+        },
+        "bans": {
+          "blue": [
+            "Jax",
+            "LeeSin",
+            "Milio",
+            "Akali",
+            "Braum"
+          ],
+          "red": [
+            "Yone",
+            "Zeri",
+            "Hwei",
+            "Rell",
+            "Taliyah"
+          ]
+        }
+      },
+      {
+        "gameNumber": 3,
+        "picks": {
+          "blue": [
+            "Gwen",
+            "MonkeyKing",
+            "Taliyah",
+            "Kaisa",
+            "Renata"
+          ],
+          "red": [
+            "Rumble",
+            "JarvanIV",
+            "Hwei",
+            "Ashe",
+            "Braum"
+          ]
+        },
+        "bans": {
+          "blue": [
+            "Jax",
+            "LeeSin",
+            "Milio",
+            "Poppy",
+            "Sett"
+          ],
+          "red": [
+            "Yone",
+            "Zeri",
+            "Akali",
+            "Rell",
+            "Camille"
+          ]
+        }
+      }
+    ],
+    "current": {
+      "gameNumber": 4,
+      "slots": [
+        {
+          "kind": "ban",
+          "side": "blue",
+          "championId": "Yone"
+        },
+        {
+          "kind": "ban",
+          "side": "red",
+          "championId": "Viktor"
+        },
+        {
+          "kind": "ban",
+          "side": "blue",
+          "championId": "Sett"
+        },
+        {
+          "kind": "ban",
+          "side": "red",
+          "championId": "Camille"
+        },
+        {
+          "kind": "ban",
+          "side": "blue",
+          "championId": "Skarner"
+        },
+        {
+          "kind": "ban",
+          "side": "red",
+          "championId": "Poppy"
+        },
+        {
+          "kind": "pick",
+          "side": "blue",
+          "championId": "Xayah"
+        },
+        {
+          "kind": "pick",
+          "side": "red",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "red",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "blue",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "blue",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "red",
+          "championId": null
+        },
+        {
+          "kind": "ban",
+          "side": "red",
+          "championId": null
+        },
+        {
+          "kind": "ban",
+          "side": "blue",
+          "championId": null
+        },
+        {
+          "kind": "ban",
+          "side": "red",
+          "championId": null
+        },
+        {
+          "kind": "ban",
+          "side": "blue",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "red",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "blue",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "blue",
+          "championId": null
+        },
+        {
+          "kind": "pick",
+          "side": "red",
+          "championId": null
+        }
+      ],
+      "cursor": 7
+    }
+  }
+}

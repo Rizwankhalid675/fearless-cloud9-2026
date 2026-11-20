@@ -110,3 +110,16 @@ describe("fearless: the legal pool", () => {
     }
   });
 });
+
+describe("fearless: banning a burned champion", () => {
+  test("a champion the series already burned cannot be banned either", () => {
+    // Surfaced by the demo generator, which refused to build a series whose
+    // game 2 banned a champion game 1 had picked. A burn removes a champion
+    // from the series; spending a ban on it is not merely wasteful, it is not
+    // a thing the draft can express.
+    const s = series({ games: [game(1, { blue: ["Ahri"] })] });
+    const v = legalityOf("Ahri", "red", s);
+    expect(v.legal).toBe(false);
+    expect(v.burnedIn).toEqual({ gameNumber: 1, side: "blue" });
+  });
+});

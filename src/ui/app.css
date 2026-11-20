@@ -1,0 +1,404 @@
+/* ---------------------------------------------------------------- tokens
+   Fearless is a control surface read in a dark room under a draft timer, so
+   it is dark-only by product decision rather than oversight: a light theme
+   would be a second design to maintain for a situation that does not occur.
+
+   The ground is deliberately a blue-leaning charcoal rather than a tinted
+   near-black — it leaves room for the two side colours to carry meaning.
+   Blue and red are not a chosen palette: they are what League calls the two
+   teams, so every other surface stays neutral or the sides stop meaning
+   anything. Boldness is spent in exactly one place, the turn strip.           */
+
+:root {
+  color-scheme: dark;
+
+  --ground: #1a1e26;
+  --panel: #22272f;
+  --panel-high: #2a303a;
+  --line: #333a45;
+  --line-soft: #2b313b;
+  --ink: #e6e9ee;
+  /* Two tiers, split by meaning rather than by shade. --ink-dim is for anything
+     a coach actually reads and clears AA on every surface here; --ink-faint is
+     only ever decoration — an empty slot's dash, a placeholder — and is never
+     the sole carrier of information. The first draft used a faint grey for
+     burned champion names at 2.88:1, which failed on both counts: a burned
+     name is the thing the coach came to read. */
+  --ink-dim: #9aa4b3;
+  --ink-faint: #767f8e;
+
+  --blue: #3e8bd8;
+  --blue-wash: #1e2a3a;
+  --red: #d4514a;
+  --red-wash: #30211f;
+
+  /* One swatch per game of the series. Muted to equal value so no game shouts
+     louder than another, and distinguishable without relying on hue alone —
+     every chip is also labelled with its game number. */
+  --g1: #d9a55b;
+  --g2: #c97f8a;
+  --g3: #7e8fd4;
+  --g4: #5fa893;
+  --g5: #a98bc9;
+
+  --ok: #5fa893;
+  --warn: #d9a55b;
+
+  --r: 3px;
+  --gap: 10px;
+
+  --t-ui: "Archivo", "Helvetica Neue", system-ui, sans-serif;
+  --t-grid: "Archivo Narrow", "Archivo", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--t-ui);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+}
+
+button, input, select { font: inherit; color: inherit; font-variant-numeric: tabular-nums; }
+
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ---------------------------------------------------------------- shell */
+
+.board {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  max-height: 100vh;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) 190px;
+  gap: 1px;
+  background: var(--line-soft);
+  min-height: 0;
+}
+
+.centre {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  background: var(--ground);
+  min-height: 0;
+}
+
+/* ---------------------------------------------------------------- series bar */
+
+.series-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 14px;
+  height: 46px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  margin-right: 4px;
+}
+.wordmark span { color: var(--ink-faint); font-weight: 400; }
+
+.games { display: flex; gap: 4px; }
+
+.game-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px 3px 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: transparent;
+  color: var(--ink-dim);
+  cursor: default;
+  font-size: 12px;
+}
+.game-chip[data-state="done"] { color: var(--ink); border-color: var(--line); }
+.game-chip[data-state="live"] { color: var(--ink); border-color: var(--ink-faint); background: var(--panel-high); }
+.game-chip .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .35; }
+.game-chip[data-state="done"] .dot { opacity: 1; }
+.game-chip[data-state="live"] .dot { opacity: 1; box-shadow: 0 0 0 2px var(--panel); }
+
+.bar-spacer { margin-left: auto; }
+
+.bar-field { display: flex; align-items: center; gap: 7px; color: var(--ink-dim); font-size: 12px; }
+
+select.control, button.control {
+  background: var(--panel-high);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+button.control:hover, select.control:hover { border-color: var(--ink-faint); }
+button.control:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ---------------------------------------------------------------- side rails */
+
+.rail {
+  background: var(--panel);
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 10px;
+  min-height: 0;
+  overflow: hidden;
+}
+.rail[data-side="blue"] { border-top: 2px solid var(--blue); }
+.rail[data-side="red"] { border-top: 2px solid var(--red); }
+
+.rail-name { font-weight: 600; font-size: 13px; color: var(--ink); }
+
+.rail-heading {
+  font-size: 11px;
+  color: var(--ink-dim);
+  border-bottom: 1px solid var(--line-soft);
+  padding-bottom: 3px;
+}
+
+.bans { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.ban {
+  flex: 0 0 auto;
+  min-width: 52px;
+  max-width: 100%;
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  font-family: var(--t-grid);
+  font-size: 12px;
+  color: var(--ink-dim);
+  text-decoration: line-through;
+  text-decoration-color: var(--ink-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ban[data-empty="true"] { color: var(--ink-faint); text-decoration: none; }
+
+.picks { display: grid; gap: 3px; align-content: start; }
+
+.pick {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 6px;
+  align-items: baseline;
+  padding: 5px 6px;
+  border-radius: var(--r);
+  background: var(--panel-high);
+  font-family: var(--t-grid);
+  font-size: 15px;
+}
+.pick .n { color: var(--ink-dim); font-size: 11px; font-family: var(--t-ui); }
+.pick[data-empty="true"] { background: transparent; border: 1px dashed var(--line-soft); color: var(--ink-faint); }
+.pick[data-active="true"] { background: var(--blue-wash); }
+.rail[data-side="red"] .pick[data-active="true"] { background: var(--red-wash); }
+
+/* ---------------------------------------------------- turn strip: the one bold thing */
+
+.turn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  height: 64px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.turn[data-side="blue"] { background: linear-gradient(90deg, var(--blue-wash), var(--panel) 70%); box-shadow: inset 3px 0 0 var(--blue); }
+.turn[data-side="red"] { background: linear-gradient(90deg, var(--red-wash), var(--panel) 70%); box-shadow: inset 3px 0 0 var(--red); }
+.turn[data-side="none"] { box-shadow: inset 3px 0 0 var(--line); }
+
+.turn-who { font-size: 22px; font-weight: 700; letter-spacing: -0.015em; }
+.turn[data-side="blue"] .turn-who { color: var(--blue); }
+.turn[data-side="red"] .turn-who { color: var(--red); }
+
+.turn-what { color: var(--ink-dim); font-size: 13px; }
+
+.clock { margin-left: auto; display: flex; align-items: baseline; gap: 14px; }
+.clock .slot { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+.clock .slot[data-low="true"] { color: var(--warn); }
+.clock .slot[data-out="true"] { color: var(--red); }
+.clock .reserve { color: var(--ink-dim); font-size: 12px; }
+
+/* ---------------------------------------------------------------- pool */
+
+.pool-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.roles { display: flex; gap: 2px; }
+
+.role {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r);
+  padding: 3px 9px;
+  color: var(--ink-dim);
+  cursor: pointer;
+  font-size: 12px;
+}
+.role:hover { color: var(--ink); }
+.role[aria-pressed="true"] { background: var(--panel-high); border-color: var(--line); color: var(--ink); }
+
+.search {
+  margin-left: auto;
+  background: var(--panel-high);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 5px 9px;
+  width: 190px;
+}
+.search::placeholder { color: var(--ink-faint); }
+
+.count { color: var(--ink-dim); font-size: 12px; white-space: nowrap; }
+
+.pool {
+  overflow-y: auto;
+  padding: 10px 14px;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  gap: 3px;
+  align-content: start;
+}
+
+.champ {
+  text-align: left;
+  font-family: var(--t-grid);
+  font-size: 15px;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r);
+  padding: 6px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  overflow: hidden;
+}
+.champ:hover:not(:disabled) { background: var(--panel-high); border-color: var(--ink-faint); }
+.champ .cname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.champ:disabled {
+  cursor: not-allowed;
+  background: transparent;
+  border-color: transparent;
+  color: var(--ink-dim);
+  text-decoration: line-through;
+  text-decoration-color: var(--ink-faint);
+}
+
+/* A burn chip: which game took this champion. Labelled, not colour-only. */
+.burn {
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-family: var(--t-ui);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 2px;
+  color: #1a1e26;
+  text-decoration: none;
+}
+.burn[data-game="1"] { background: var(--g1); }
+.burn[data-game="2"] { background: var(--g2); }
+.burn[data-game="3"] { background: var(--g3); }
+.burn[data-game="4"] { background: var(--g4); }
+.burn[data-game="5"] { background: var(--g5); }
+
+.empty-pool { padding: 28px 14px; color: var(--ink-dim); max-width: 46ch; }
+.empty-pool strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 4px; }
+
+/* ---------------------------------------------------------------- advisor */
+
+.advisor {
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+  padding: 9px 14px 11px;
+  display: grid;
+  gap: 7px;
+  max-height: 38vh;
+  overflow-y: auto;
+}
+
+.advisor-head { display: flex; align-items: center; gap: 10px; }
+.advisor-head .who { font-size: 12px; color: var(--ink-dim); }
+.advisor-head .blocked { margin-left: auto; font-size: 12px; }
+.advisor-head .blocked[data-any="true"] { color: var(--warn); }
+.advisor-head .blocked[data-any="false"] { color: var(--ok); }
+
+.suggestions { display: grid; gap: 2px; }
+
+.suggestion {
+  display: grid;
+  grid-template-columns: 16px minmax(104px, 150px) 42px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  padding: 5px 6px;
+  border-radius: var(--r);
+  border-left: 2px solid transparent;
+}
+.suggestion[data-legal="true"] { background: var(--panel-high); border-left-color: var(--ok); }
+.suggestion[data-legal="false"] { border-left-color: var(--red); }
+
+.suggestion .rank { color: var(--ink-dim); font-size: 11px; }
+.suggestion .who { font-family: var(--t-grid); font-size: 15px; }
+.suggestion[data-legal="false"] .who { text-decoration: line-through; text-decoration-color: var(--red); color: var(--ink-dim); }
+.suggestion .conf { color: var(--ink-dim); font-size: 12px; }
+.suggestion .why { color: var(--ink-dim); font-size: 12px; }
+.suggestion[data-legal="false"] .why { color: var(--ink); }
+.suggestion .why .chip { margin-left: 6px; }
+
+.advisor-empty { color: var(--ink-dim); font-size: 12px; }
+
+.key-field { display: flex; gap: 6px; align-items: center; }
+.key-field input {
+  background: var(--panel-high);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 4px 8px;
+  width: 210px;
+}
+
+.problems { color: var(--warn); font-size: 12px; margin: 0; padding-left: 16px; }
+
+/* Below a laptop the three-column board stops being one screen; stack it
+   rather than pretend. A coach on a phone is reviewing, not drafting. */
+@media (max-width: 860px) {
+  .columns { grid-template-columns: 1fr; }
+  .board { max-height: none; }
+  .pool { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

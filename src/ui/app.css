@@ -102,9 +102,15 @@ button, input, select { font: inherit; color: inherit; font-variant-numeric: tab
 .series-bar {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 0 14px;
-  height: 46px;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 6px 14px;
+  /* min-height, not height: the bar must be allowed to wrap. Its children come
+     to ~978px and it cannot shrink, so a fixed single row made the BODY 978px
+     wide and every full-width descendant inherited the overflow. That was fixed
+     once below 860px and left broken between 861px and ~978px — a laptop
+     window at 900px scrolled sideways. Wrapping is unconditional now. */
+  min-height: 46px;
   background: var(--panel);
   border-bottom: 1px solid var(--line);
 }
@@ -117,7 +123,7 @@ button, input, select { font: inherit; color: inherit; font-variant-numeric: tab
 }
 .wordmark span { color: var(--ink-faint); font-weight: 400; }
 
-.games { display: flex; gap: 4px; }
+.games { display: flex; flex-wrap: wrap; gap: 4px; }
 
 .game-chip {
   display: inline-flex;
@@ -140,6 +146,9 @@ button, input, select { font: inherit; color: inherit; font-variant-numeric: tab
 .bar-spacer { margin-left: auto; }
 
 .bar-field { display: flex; align-items: center; gap: 7px; color: var(--ink-dim); font-size: 12px; }
+
+/* a select with a long option label will not shrink below it without this */
+.bar-field select.control { min-width: 0; }
 
 select.control, button.control {
   background: var(--panel-high);
@@ -395,15 +404,8 @@ button.control:disabled { opacity: .4; cursor: not-allowed; }
    `minmax(0, 1fr)` row has nothing to be a fraction OF once `.board` loses
    its `max-height`, so it collapsed to 20px. Both need saying explicitly. */
 @media (max-width: 860px) {
-  /* The real overflow source: the series bar is a nowrap flex row whose
-     children total ~978px. It cannot shrink, so the BODY grows to fit it and
-     every 100%-width descendant inherits the overflow — the stacked column
-     measured 978px inside a 567px window because of this one element, not
-     because of anything in the column itself. */
-  .series-bar { height: auto; flex-wrap: wrap; gap: 8px 12px; padding: 10px 14px; }
-  .games { flex-wrap: wrap; }
   .bar-field.bar-spacer { margin-left: 0; width: 100%; }
-  .bar-field select.control { min-width: 0; flex: 1; }
+  .bar-field select.control { flex: 1; }
 
   .columns { grid-template-columns: minmax(0, 1fr); }
   .board { max-height: none; }

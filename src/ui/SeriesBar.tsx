@@ -39,10 +39,15 @@ export function SeriesBar({ series, onRuleset, onExport, onImport, onCompleteGam
           value={series.ruleset}
           onChange={(e) => onRuleset(e.target.value as Ruleset)}
           disabled={series.games.length > 0}
-          title={series.games.length > 0 ? "The ruleset is fixed once a game has been played." : undefined}
+          title={
+            series.games.length > 0
+              ? "The ruleset is fixed once a game has been played."
+              : "Fearless: a previous game's picks are burned for both teams. " +
+                "Team fearless: burned only for the team that picked them."
+          }
         >
-          <option value="fearless">Fearless — picks burn for both teams</option>
-          <option value="team-fearless">Team fearless — picks burn for that team</option>
+          <option value="fearless">Fearless · both teams</option>
+          <option value="team-fearless">Team fearless · own picks</option>
         </select>
       </label>
 

@@ -1,0 +1,418 @@
+{
+ "shots": [
+  {
+   "file": "video/frames/0000.png",
+   "ms": 3200
+  },
+  {
+   "file": "video/frames/0001.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0002.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0003.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0004.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0005.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0006.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0007.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0008.png",
+   "ms": 800
+  },
+  {
+   "file": "video/frames/0009.png",
+   "ms": 3649
+  },
+  {
+   "file": "video/frames/0010.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0011.png",
+   "ms": 5583
+  },
+  {
+   "file": "video/frames/0012.png",
+   "ms": 700
+  },
+  {
+   "file": "video/frames/0013.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0014.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0015.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0016.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0017.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0018.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0019.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0020.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0021.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0022.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0023.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0024.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0025.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0026.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0027.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0028.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0029.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0030.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0031.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0032.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0033.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0034.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0035.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0036.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0037.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0038.png",
+   "ms": 70
+  },
+  {
+   "file": "video/frames/0039.png",
+   "ms": 12215
+  },
+  {
+   "file": "video/frames/0040.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0041.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0042.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0043.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0044.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0045.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0046.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0047.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0048.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0049.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0050.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0051.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0052.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0053.png",
+   "ms": 40
+  },
+  {
+   "file": "video/frames/0054.png",
+   "ms": 10692
+  },
+  {
+   "file": "video/frames/0055.png",
+   "ms": 13992
+  },
+  {
+   "file": "video/frames/0056.png",
+   "ms": 9999
+  },
+  {
+   "file": "video/frames/0057.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0058.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0059.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0060.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0061.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0062.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0063.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0064.png",
+   "ms": 6073
+  },
+  {
+   "file": "video/frames/0065.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0066.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0067.png",
+   "ms": 10316
+  },
+  {
+   "file": "video/frames/0068.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0069.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0070.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0071.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0072.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0073.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0074.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0075.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0076.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0077.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0078.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0079.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0080.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0081.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0082.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0083.png",
+   "ms": 50
+  },
+  {
+   "file": "video/frames/0084.png",
+   "ms": 11706
+  }
+ ],
+ "beats": [
+  {
+   "n": 0,
+   "label": "empty board",
+   "startMs": 0,
+   "padHeadMs": 600,
+   "narrationMs": 11749,
+   "totalMs": 13249
+  },
+  {
+   "n": 1,
+   "label": "load the demo",
+   "startMs": 13249,
+   "padHeadMs": 600,
+   "narrationMs": 4133,
+   "totalMs": 5633
+  },
+  {
+   "n": 2,
+   "label": "burned champions",
+   "startMs": 18882,
+   "padHeadMs": 600,
+   "narrationMs": 13235,
+   "totalMs": 14735
+  },
+  {
+   "n": 3,
+   "label": "ask the advisor",
+   "startMs": 33617,
+   "padHeadMs": 600,
+   "narrationMs": 9752,
+   "totalMs": 11252
+  },
+  {
+   "n": 4,
+   "label": "blocked count",
+   "startMs": 44869,
+   "padHeadMs": 600,
+   "narrationMs": 12492,
+   "totalMs": 13992
+  },
+  {
+   "n": 5,
+   "label": "the reason",
+   "startMs": 58861,
+   "padHeadMs": 600,
+   "narrationMs": 8499,
+   "totalMs": 9999
+  },
+  {
+   "n": 6,
+   "label": "type to lock",
+   "startMs": 68860,
+   "padHeadMs": 600,
+   "narrationMs": 4923,
+   "totalMs": 6423
+  },
+  {
+   "n": 7,
+   "label": "export and import",
+   "startMs": 75283,
+   "padHeadMs": 600,
+   "narrationMs": 8916,
+   "totalMs": 10416
+  },
+  {
+   "n": 8,
+   "label": "results on github",
+   "startMs": 85699,
+   "padHeadMs": 600,
+   "narrationMs": 11006,
+   "totalMs": 12506
+  }
+ ]
+}

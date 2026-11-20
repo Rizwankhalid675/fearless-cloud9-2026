@@ -11,3 +11,10 @@ coverage/
 .idea/shelf/
 .idea/usage.statistics.xml
 .idea/httpRequests/
+
+# video working files: large, regenerable with capture.mjs + narrate-elevenlabs.sh
+video/frames/
+video/audio/
+video/raw/
+video/check/
+video/series.json

@@ -1,0 +1,17 @@
+Fearless Draft bans every champion used in earlier games of a series. By game five a coach is tracking roughly fifty unavailable champions, on a thirty second timer. Most of them do it in a spreadsheet.
+
+This is Fearless. One click loads a real best of five, three games in.
+
+Thirty champions are already burned. They do not vanish from the board. Each one stays, struck through, carrying a chip for the game that took it, because a pool that silently shrinks is the spreadsheet problem again in a nicer font.
+
+Now the advisor. It proposes five champions for red's next pick, and it has no idea what is legal. It is a priority sheet, exactly like the one a coach actually uses.
+
+Four of its five suggestions are already gone. Every one was caught by deterministic code before it reached the screen, and labelled with the game that burned it. The model proposes. The rules engine decides.
+
+Nothing is hidden from the coach either. A blocked suggestion stays on screen with the reason, so they learn why it is gone instead of watching it disappear.
+
+Type to search, press enter to lock. Nobody hunts for a text field on a thirty second timer.
+
+Export the series, reload the page, import it back. The draft returns exactly as it was, so a laptop dying between games costs nothing.
+
+One hundred and two tests, no network and no API key. The engine matches hand computed ground truth on ten series states, and across them the gate refused twenty one of fifty suggestions.

@@ -1,0 +1,112 @@
+1
+00:00:00,600 --> 00:00:04,653
+Fearless Draft bans every champion used in
+earlier games of a series.
+
+2
+00:00:04,653 --> 00:00:10,234
+By game five a coach is tracking roughly
+fifty unavailable champions, on a thirty
+second timer.
+
+3
+00:00:10,234 --> 00:00:12,349
+Most of them do it in a spreadsheet.
+
+4
+00:00:13,849 --> 00:00:14,867
+This is Fearless.
+
+5
+00:00:14,867 --> 00:00:17,982
+One click loads a real best of five, three
+games in.
+
+6
+00:00:19,482 --> 00:00:21,544
+Thirty champions are already burned.
+
+7
+00:00:21,544 --> 00:00:23,492
+They do not vanish from the board.
+
+8
+00:00:23,492 --> 00:00:32,717
+Each one stays, struck through, carrying a
+chip for the game that took it, because a
+pool that silently shrinks is the
+spreadsheet problem again in a nicer font.
+
+9
+00:00:34,217 --> 00:00:35,168
+Now the advisor.
+
+10
+00:00:35,168 --> 00:00:39,984
+It proposes five champions for red's next
+pick, and it has no idea what is legal.
+
+11
+00:00:39,984 --> 00:00:43,969
+It is a priority sheet, exactly like the
+one a coach actually uses.
+
+12
+00:00:45,469 --> 00:00:48,272
+Four of its five suggestions are already
+gone.
+
+13
+00:00:48,272 --> 00:00:55,279
+Every one was caught by deterministic code
+before it reached the screen, and labelled
+with the game that burned it.
+
+14
+00:00:55,279 --> 00:00:56,437
+The model proposes.
+
+15
+00:00:56,437 --> 00:00:57,960
+The rules engine decides.
+
+16
+00:00:59,461 --> 00:01:01,640
+Nothing is hidden from the coach either.
+
+17
+00:01:01,640 --> 00:01:07,960
+A blocked suggestion stays on screen with
+the reason, so they learn why it is gone
+instead of watching it disappear.
+
+18
+00:01:09,460 --> 00:01:11,407
+Type to search, press enter to lock.
+
+19
+00:01:11,407 --> 00:01:14,383
+Nobody hunts for a text field on a thirty
+second timer.
+
+20
+00:01:15,883 --> 00:01:19,276
+Export the series, reload the page, import
+it back.
+
+21
+00:01:19,276 --> 00:01:24,799
+The draft returns exactly as it was, so a
+laptop dying between games costs nothing.
+
+22
+00:01:26,299 --> 00:01:29,435
+One hundred and two tests, no network and
+no API key.
+
+23
+00:01:29,435 --> 00:01:37,305
+The engine matches hand computed ground
+truth on ten series states, and across
+them the gate refused twenty one of fifty
+suggestions.

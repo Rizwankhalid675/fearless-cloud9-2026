@@ -56,6 +56,28 @@ declaration that is not mine to make.
 | How likely are you to use JetBrains tools again? | Same. |
 | The eligibility attestations (age of majority, eligible jurisdiction, not an employee of the sponsors) | Legal declarations about you. Tick them yourself. |
 
+## Re-verified 23 Nov 2026
+
+Checked again rather than assumed, three days on:
+
+- **Devpost submission 1313675: DRAFT, 3/5 steps done.** Every blank field is
+  JetBrains-dependent, exactly as listed below — nothing else has gone missing.
+  Already saved and intact: category, new/existing, the methodology write-up, the
+  AI-tools answer, repo URL, demo URL, country, submitter type.
+- **Repo is public**, MIT licensed, homepage set to the Pages URL.
+- **Video is genuinely public** — `"isUnlisted":false, "isPrivate":false` read from
+  the watch page. An oEmbed 200 does *not* prove this; unlisted videos return 200
+  too.
+- **The live site still serves `index-CfbdfETJ.js` / `index-BePOrruP.css`**, so the
+  deployed build is still the submitted one.
+- **Preflight: 24 passed, 0 warnings, 0 blockers.**
+- **Suite: 102 passed / 10 skipped**, typecheck clean, working tree clean.
+
+Two of the unanswered fields are opinion questions that do **not** depend on the
+WebStorm session — "how much did this hackathon help you develop new skills" and
+"how likely are you to use JetBrains tools again". They can be answered any time;
+they are left blank because they are yours, not because they are blocked.
+
 ## Verified on 20 Nov 2026
 
 - Deployed assets match the local build from HEAD exactly (`index-CfbdfETJ.js`,

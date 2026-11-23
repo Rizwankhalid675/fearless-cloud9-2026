@@ -81,14 +81,25 @@ now, one is an opinion that reads better after it.
 | Question | Options | When |
 |---|---|---|
 | **Did you utilize the JetBrains Junie AI coding agent…?** | Yes, extensively / Yes, briefly / **No** | After. `No` is a perfectly good answer and costs nothing. |
-| **Did you use JetBrains IDEs with JetBrains Air…?** | Yes / Partially / **No** | **Answerable now** — `No`. Not blocked by anything. |
+| ~~**Did you use JetBrains IDEs with JetBrains Air…?**~~ | Yes / Partially / **No** | ✅ **Set to `No` on 23 Nov** and verified by reloading the page. |
 | **Are you submitting for the bonus prize?** | Yes / No | After. `Yes`, with the Bonus Prize URL pointing at the filled `docs/JETBRAINS.md`. Leave `No` if Part 2 never gets written — an empty write-up scores nothing and an invented one is worse. |
 | **How much did this hackathon help you develop new skills or knowledge?** | Not at all / A little / Somewhat / **A lot** / Significantly | Either. The build used familiar ground (TypeScript, React, Vitest); the genuinely new part is the IDE and its debugger. Honest answer before the session is `Somewhat`; after it, probably `A lot`. Waiting costs nothing. |
 | **How likely are you to use JetBrains tools again…?** | Very unlikely / Unlikely / Not sure / Likely / Very likely | **After, necessarily.** The question says *again*, which presupposes having used them. There is no honest answer to it before the session. |
 
-So the only field genuinely answerable today is **JetBrains Air → No**. The rest
-are yours after the session, and all five are opinions or facts about what you
-did — not mine to invent.
+There is also a sixth, a required multi-select I had not catalogued:
+
+| **\* Which JetBrains tools did you use?** | a tool list — IntelliJ IDEA, PyCharm, WebStorm, JetBrains Air, Other | After. Tick **WebStorm**. |
+
+The only one answerable today was **JetBrains Air → No**, and it is now set. The
+rest are yours after the session — opinions, or facts about what you did, and
+not mine to invent.
+
+**A Devpost behaviour worth knowing:** saving this step with required fields
+still blank **succeeds**. It advanced to the finalization step, showed no
+errors, and left the counter at 3/5. Validation happens at **Submit**, not at
+save. So "the step saved" is not evidence the step is complete — the only
+reliable check is reading the fields back, which is how the `No` above was
+confirmed.
 
 ## Verified on 20 Nov 2026
 

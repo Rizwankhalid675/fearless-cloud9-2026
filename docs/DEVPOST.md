@@ -73,10 +73,22 @@ Checked again rather than assumed, three days on:
 - **Preflight: 24 passed, 0 warnings, 0 blockers.**
 - **Suite: 102 passed / 10 skipped**, typecheck clean, working tree clean.
 
-Two of the unanswered fields are opinion questions that do **not** depend on the
-WebStorm session — "how much did this hackathon help you develop new skills" and
-"how likely are you to use JetBrains tools again". They can be answered any time;
-they are left blank because they are yours, not because they are blocked.
+### The five unanswered dropdowns, with their real options
+
+Read off the form on 23 Nov. Three are blocked by the session, one is answerable
+now, one is an opinion that reads better after it.
+
+| Question | Options | When |
+|---|---|---|
+| **Did you utilize the JetBrains Junie AI coding agent…?** | Yes, extensively / Yes, briefly / **No** | After. `No` is a perfectly good answer and costs nothing. |
+| **Did you use JetBrains IDEs with JetBrains Air…?** | Yes / Partially / **No** | **Answerable now** — `No`. Not blocked by anything. |
+| **Are you submitting for the bonus prize?** | Yes / No | After. `Yes`, with the Bonus Prize URL pointing at the filled `docs/JETBRAINS.md`. Leave `No` if Part 2 never gets written — an empty write-up scores nothing and an invented one is worse. |
+| **How much did this hackathon help you develop new skills or knowledge?** | Not at all / A little / Somewhat / **A lot** / Significantly | Either. The build used familiar ground (TypeScript, React, Vitest); the genuinely new part is the IDE and its debugger. Honest answer before the session is `Somewhat`; after it, probably `A lot`. Waiting costs nothing. |
+| **How likely are you to use JetBrains tools again…?** | Very unlikely / Unlikely / Not sure / Likely / Very likely | **After, necessarily.** The question says *again*, which presupposes having used them. There is no honest answer to it before the session. |
+
+So the only field genuinely answerable today is **JetBrains Air → No**. The rest
+are yours after the session, and all five are opinions or facts about what you
+did — not mine to invent.
 
 ## Verified on 20 Nov 2026
 

@@ -83,6 +83,21 @@ something drifted since 23 Nov.
 
 ---
 
+## Every line number here was re-verified on 25 November 2026
+
+The brief says to stop if anything differs from 23 Nov. Nothing does — each of
+these was checked again rather than assumed:
+
+| Claim | Still true |
+|---|---|
+| `describe.skip` at lines **21, 63, 97** of `tests/keyboard.test.tsx` | yes, and the line 5 mention is a comment |
+| `role="listitem"` has **three** hits, only `PoolGrid.tsx:94` wrong | yes — the others are on a `<div>` and a `<span>` |
+| `role="list"` at `PoolGrid.tsx:90` | yes |
+| `tests/ui.test.tsx` **79 and 86** are the two `getByRole("listitem", …)` | yes, verbatim |
+| `.gitignore` excludes `workspace.xml`, `shelf/`, `usage.statistics.xml`, `httpRequests/` | yes, with the comment saying to commit the rest |
+| `docs/img/jetbrains/` exists for the screenshots | yes |
+| `nextIndex` still throws, nothing imports it | yes, 36 lines of signature and JSDoc |
+
 ## The work, in order
 
 1. **Open the repo**, let indexing finish.

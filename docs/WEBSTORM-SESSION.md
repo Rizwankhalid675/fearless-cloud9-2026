@@ -8,11 +8,19 @@ standing between Fearless and a submitted entry.
 
 ---
 
-## Step 0 — install WebStorm (it is not installed)
+## ~~Step 0 — install WebStorm~~ — DONE, 25 November 2026
 
-Checked 23 Nov: no JetBrains IDE on this machine.
-**Re-checked 25 Nov: still none** — no app in `/Applications`, no
-`~/Library/Application Support/JetBrains`. Step 0 is still step 0.
+**WebStorm 2026.3.0.1 is installed** at `/Applications/WebStorm.app`, via
+`brew install --cask webstorm`. A `webstorm` command wrapper is on the PATH at
+`/opt/homebrew/bin/webstorm`, so `webstorm .` from the repo root opens it.
+
+**First launch is yours**, and it is two clicks: WebStorm asks you to accept the
+JetBrains user agreement and to pick a licence. Either route works — the **All
+Products Pack code** from the hackathon registration email, or **free for
+non-commercial use**, which a hackathon entry is. Accepting a licence agreement
+is a statement by you, so it is not something to automate.
+
+Start at step 1 below.
 
 Two routes, either is fine:
 - The **All Products Pack code** from the hackathon registration email.

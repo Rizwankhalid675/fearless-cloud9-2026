@@ -11,6 +11,8 @@ standing between Fearless and a submitted entry.
 ## Step 0 — install WebStorm (it is not installed)
 
 Checked 23 Nov: no JetBrains IDE on this machine.
+**Re-checked 25 Nov: still none** — no app in `/Applications`, no
+`~/Library/Application Support/JetBrains`. Step 0 is still step 0.
 
 Two routes, either is fine:
 - The **All Products Pack code** from the hackathon registration email.
@@ -19,6 +21,26 @@ Two routes, either is fine:
   is non-commercial.
 
 ---
+
+## Everything else was re-verified on 25 November 2026
+
+Nothing has drifted in two days, so none of it needs redoing:
+
+| Checked | Result |
+|---|---|
+| Test state | `102 passed, 10 skipped (112)` — exactly what this page predicts |
+| Public repo | `github.com/Rizwankhalid675/fearless-cloud9-2026` → 200 signed out |
+| Licence | `LICENSE` present at the root |
+| Demo site | `rizwankhalid675.github.io/fearless-cloud9-2026/` → 200, titled *Fearless — draft organiser*, bundle loads |
+| Demo video | `youtu.be/A_UkgPpzhfM` → public, confirmed via oEmbed with no session |
+| Devpost draft | 3/5 steps, story and answers saved per `DEVPOST.md` |
+
+So **one thing stands between this and a submitted entry**, and it is the
+mandatory one: *"Build or significantly update a working project using at least
+one JetBrains tool."* Until the session below happens, the required multi-select
+*"Which JetBrains tools did you use?"* has no truthful answer, and the $1,000
+bonus write-up in `JETBRAINS.md` stays the marked-empty scaffold it honestly
+says it is. 48 days left.
 
 ## The three states, verified on 23 Nov
 
